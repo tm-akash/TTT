@@ -1,9 +1,14 @@
 package com.niit.mapper.config;
 
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer  {
 
+	public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**");
+    }
+	
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
